@@ -1,0 +1,742 @@
+[
+    {
+        "image": "https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 4,
+        "roomType": "Double",
+        "roomCharacteristics": "Executive",
+        "booking": false,
+        "price": 50,
+        "description": "A family-friendly room designed for comfort and space. It includes multiple beds, a private balcony, and entertainment facilities. Enjoy a relaxing stay with 24/7 room service and complimentary bottled water.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/6301172/pexels-photo-6301172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 1,
+        "roomType": "Double",
+        "roomCharacteristics": "Executive",
+        "booking": false,
+        "price": 40,
+        "description": "Experience ultimate comfort in this cozy room with garden views. The room features plush bedding, free Wi-Fi, and a safe for your valuables. Housekeeping is included for your convenience.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/7746573/pexels-photo-7746573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 1,
+        "roomType": "Single",
+        "roomCharacteristics": "Executive",
+        "booking": false,
+        "price": 60,
+        "description": "A family-friendly room designed for comfort and space. It includes multiple beds, a private balcony, and entertainment facilities. Enjoy a relaxing stay with 24/7 room service and complimentary bottled water.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/6492389/pexels-photo-6492389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 3,
+        "roomType": "Double",
+        "roomCharacteristics": "Deluxe",
+        "booking": false,
+        "price": 70,
+        "description": "This superior king room offers breathtaking hill or garden views, perfect for a serene escape. Designed for comfort and elegance, it accommodates up to two guests. The room is equipped with essential amenities like a mini fridge, air conditioning, and a private balcony for your relaxation.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/8135105/pexels-photo-8135105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Double",
+        "roomCharacteristics": "Superior",
+        "booking": false,
+        "price": 70,
+        "description": "Stay connected with free Wi-Fi and enjoy entertainment on the cable TV. For your convenience, room service and daily housekeeping are included. This non-smoking room ensures a fresh and clean atmosphere, ideal for health-conscious travelers.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 3,
+        "roomType": "Suite",
+        "roomCharacteristics": "Superior",
+        "booking": false,
+        "price": 40,
+        "description": "A luxurious room with modern amenities, offering breathtaking sea views. Equipped with air conditioning, a flat-screen TV, and a mini fridge. Ideal for couples seeking a romantic getaway.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/2416931/pexels-photo-2416931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Double",
+        "roomCharacteristics": "Deluxe",
+        "booking": false,
+        "price": 90,
+        "description": "Experience ultimate comfort in this cozy room with garden views. The room features plush bedding, free Wi-Fi, and a safe for your valuables. Housekeeping is included for your convenience.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/6301173/pexels-photo-6301173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 1,
+        "roomType": "Single",
+        "roomCharacteristics": "Superior",
+        "booking": false,
+        "price": 60,
+        "description": "This room offers a stunning city view, perfect for business or leisure travelers. The room includes a spacious bed, a minibar, and a private bathroom. Guests can enjoy high-speed internet and daily housekeeping for a comfortable stay.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/27604120/pexels-photo-27604120/free-photo-of-dania-city-villa-in-sulaymaniyah-city.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Double",
+        "roomCharacteristics": "Standard",
+        "booking": false,
+        "price": 50,
+        "description": "A budget-friendly option with essential amenities. Includes a comfortable bed, a small workspace, and access to free Wi-Fi. Perfect for solo travelers or business trips.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/15824908/pexels-photo-15824908/free-photo-of-modern-bedroom-with-a-large-bed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 4,
+        "roomType": "Suite",
+        "roomCharacteristics": "Luxury",
+        "booking": false,
+        "price": 70,
+        "description": "Enjoy panoramic views of the mountains with a private balcony. This spacious suite includes luxurious furniture, a king-size bed, a fully equipped minibar, and a private Jacuzzi for ultimate relaxation.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/19277907/pexels-photo-19277907/free-photo-of-modern-design-of-a-teenage-boy-bedroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Double",
+        "roomCharacteristics": "Superior",
+        "booking": false,
+        "price": 80,
+        "description": "Relax in a beautiful double room with scenic garden views. The room is equipped with comfortable bedding, air conditioning, and a minibar. Enjoy free Wi-Fi, cable TV, and daily housekeeping services.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/28272347/pexels-photo-28272347/free-photo-of-a-bedroom-with-a-ceiling-fan-and-a-bed.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 1,
+        "roomType": "Single",
+        "roomCharacteristics": "Standard",
+        "booking": false,
+        "price": 50,
+        "description": "Perfect for solo travelers, this single room offers a cozy bed, free Wi-Fi, and access to all essential amenities. A comfortable and convenient stay awaits.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/18285949/pexels-photo-18285949/free-photo-of-interior-of-a-luxurious-bedroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 3,
+        "roomType": "Suite",
+        "roomCharacteristics": "Luxury",
+        "booking": false,
+        "price": 90,
+        "description": "This spacious suite features a king-size bed, a luxurious seating area, and panoramic views of the surrounding cityscape. Enjoy premium amenities like an espresso machine and daily housekeeping.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/18038058/pexels-photo-18038058/free-photo-of-comfort-bed-in-bedroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Double",
+        "roomCharacteristics": "Executive",
+        "booking": false,
+        "price": 70,
+        "description": "A sophisticated double room offering a comfortable atmosphere with modern decor. Enjoy excellent views of the hill, free Wi-Fi, air conditioning, and daily housekeeping.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/17240689/pexels-photo-17240689/free-photo-of-fan-over-bed-in-hotel-room.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 1,
+        "roomType": "Single",
+        "roomCharacteristics": "Standard",
+        "booking": false,
+        "price": 50,
+        "description": "A well-furnished single room with all the essentials. Perfect for business or leisure stays with a mini fridge, television, and free bottled water.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/25568734/pexels-photo-25568734/free-photo-of-interior-of-a-modern-bedroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 4,
+        "roomType": "Double",
+        "roomCharacteristics": "Deluxe",
+        "booking": false,
+        "price": 90,
+        "description": "A spacious double room with a private balcony, offering a perfect view of the hills. Stay connected with free Wi-Fi, enjoy a variety of TV channels, and relax with room service.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/7545791/pexels-photo-7545791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 3,
+        "roomType": "Suite",
+        "roomCharacteristics": "Luxury",
+        "booking": false,
+        "price": 80,
+        "description": "Enjoy a luxurious suite with a king-size bed and stunning views of the surrounding area. The suite includes a seating area, premium amenities, and daily housekeeping.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/28464714/pexels-photo-28464714/free-photo-of-luxurious-bedroom-interior-in-saligao-villa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Double",
+        "roomCharacteristics": "Superior",
+        "booking": false,
+        "price": 50,
+        "description": "A cozy double room with modern facilities. Equipped with air conditioning, cable TV, and a mini fridge, it is perfect for a relaxing stay with scenic views of the garden.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/97083/pexels-photo-97083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 2,
+        "roomType": "Single",
+        "roomCharacteristics": "Standard",
+        "booking": false,
+        "price": 70,
+        "description": "This single room is perfect for one guest. It includes a comfortable bed, air conditioning, a mini fridge, and cable TV. Enjoy your stay with free bottled water and daily housekeeping.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    },
+    {
+        "image": "https://images.pexels.com/photos/18201945/pexels-photo-18201945/free-photo-of-interior-of-a-hotel-room.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "maximumGuests": 3,
+        "roomType": "Double",
+        "roomCharacteristics": "Executive",
+        "booking": false,
+        "price": 60,
+        "description": "A comfortable double room offering scenic views of the city. Equipped with air conditioning, a TV, and a minibar. Ideal for travelers seeking convenience and comfort.",
+        "facilities": {
+            "mediaAndTechnology": [
+                "Internet",
+                "Wi-Fi",
+                "Telephone",
+                "TV",
+                "Television Content",
+                "Cable TV"
+            ],
+            "bedroomFacilities": [
+                "Fan",
+                "Air Conditioning",
+                "Closet",
+                "Curtain",
+                "Balcony",
+                "In-Room Safe",
+                "Blankets"
+            ],
+            "others": [
+                "Housekeeping",
+                "Room Service",
+                "Electric Kettle"
+            ],
+            "foodAndDrink": [
+                "Mini Fridge",
+                "Free Bottled Water"
+            ]
+        }
+    }
+]
