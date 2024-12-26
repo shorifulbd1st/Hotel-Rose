@@ -8,7 +8,7 @@ const Rooms = () => {
     console.log(data.length)
     return (
         <div className='w-11/12 mx-auto my-5'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
                     data.map(room => <Room key={room._id} room={room}></Room>)
                 }
