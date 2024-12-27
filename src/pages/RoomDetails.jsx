@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
+import Stars from 'react-stars';
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import axios from 'axios';
@@ -14,7 +15,7 @@ const RoomDetails = () => {
     const { user, notify } = useContext(AuthContext);
 
     // console.log(room)
-    const { _id, booking, image, maximumGuests, roomType, roomCharacteristics, price, description, facilities } = room;
+    const { _id, rating, booking, image, maximumGuests, roomType, roomCharacteristics, price, description, facilities } = room;
     const { mediaAndTechnology, bedroomFacilities, others, foodAndDrink } = facilities;
 
 
@@ -204,6 +205,14 @@ const RoomDetails = () => {
                             </div>
                         </div>
 
+                        <div className='flex items-center gap-3 '>Raging:  <Stars
+                            className='cursor-not-allowed'
+                            count={5}
+                            value={parseInt(rating)}
+                            size={24}
+                            half={true} // Enables half-stars
+                            color2={"#ffd700"}
+                        /> </div>
                         <div className="mt-6 text-center">
 
                             {

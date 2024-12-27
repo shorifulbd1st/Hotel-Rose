@@ -102,7 +102,7 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
         const email = user?.email;
         const name = form.name.value;
         const date = startDate1;
-        const rating = form.rating.value;
+        const rating = parseInt(form.rating.value);
         const comment = form.comment.value;
         const data = { email, roomId, name, date, rating, comment };
         console.log(data)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Stars from 'react-stars';
 const SingleRoom = ({ room }) => {
     const {
         _id,
@@ -11,7 +11,8 @@ const SingleRoom = ({ room }) => {
         booking,
         description,
         facilities,
-        price
+        price,
+        rating
     } = room;
 
     return (
@@ -44,6 +45,14 @@ const SingleRoom = ({ room }) => {
                             <p><span className="font-medium text-gray-500">Food and Drink</span></p>
 
                         </div>
+                        <div className='flex items-center gap-3 '>Raging:  <Stars
+                            className='cursor-not-allowed'
+                            count={5}
+                            value={parseInt(rating)}
+                            size={24}
+                            half={true} // Enables half-stars
+                            color2={"#ffd700"}
+                        /> </div>
                     </div>
                 </div>
             </div>
