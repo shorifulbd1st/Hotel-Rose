@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Navigate, useLoaderData, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 import Stars from 'react-stars';
@@ -14,12 +14,8 @@ const RoomDetails = () => {
 
     const { user, notify } = useContext(AuthContext);
 
-    // console.log(room)
     const { _id, rating, booking, image, maximumGuests, roomType, roomCharacteristics, price, description, facilities } = room;
     const { mediaAndTechnology, bedroomFacilities, others, foodAndDrink } = facilities;
-
-
-
 
     const [reviews, setReviews] = useState([])
     useEffect(() => {
@@ -32,10 +28,6 @@ const RoomDetails = () => {
     }, [])
     // console.log(reviews.length)
     // console.log(reviews)
-
-
-
-
 
     const [startDate, setStartDate] = useState(new Date())
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -73,7 +65,17 @@ const RoomDetails = () => {
 
         closeModal();
     };
-
+    const location = useLocation()
+    const handleBook = e => {
+        // console.log('hello handle book')
+        if (user?.email) {
+            openModal()
+        }
+        else {
+            // console.log('object')
+            navigate('/signin', { state: { from: location.pathname } });
+        }
+    }
     return (
         <div className='w-11/12 mx-auto my-5'>
             <div className="w-full overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 border-2 hover:border-blue-400 transition duration-300">
@@ -205,14 +207,16 @@ const RoomDetails = () => {
                             </div>
                         </div>
 
-                        <div className='flex items-center gap-3 '>Raging:  <Stars
-                            className='cursor-not-allowed'
-                            count={5}
-                            value={parseInt(rating)}
-                            size={24}
-                            half={true} // Enables half-stars
-                            color2={"#ffd700"}
-                        /> </div>
+                        <div className='flex items-center gap-3 '> <strong>Review:</strong> {rating}
+                            {/* <Stars
+                                className='cursor-not-allowed'
+                                count={5}
+                                value={parseInt(rating)}
+                                size={24}
+                                half={true} // Enables half-stars
+                                color2={"#ffd700"}
+                            /> */}
+                        </div>
                         <div className="mt-6 text-center">
 
                             {
@@ -222,7 +226,7 @@ const RoomDetails = () => {
                                 >
                                     This room Unavailable
                                 </button> : <button
-                                    onClick={openModal}
+                                    onClick={handleBook}
                                     className="px-6 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-400 transition-colors duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
                                 >
                                     Book Now
@@ -237,7 +241,8 @@ const RoomDetails = () => {
 
             <div>
                 {
-                    reviews.map(review => <Review key={review._id} review={review}></Review>)
+                    reviews.length > 0 ? reviews.map(review => <Review key={review._id} review={review}></Review>) :
+                        <span className="block w-fit capitalize text-xl my-5 py-2  font-medium text-red-500 rounded-lg  transition-colors duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">No reviews were found for this room.</span>
                 }
             </div>
 

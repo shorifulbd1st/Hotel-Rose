@@ -309,6 +309,8 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
                                             Your Name
                                         </label>
                                         <input
+                                            value={user?.displayName}
+                                            readOnly
                                             type="text"
                                             name='name'
                                             id="firstName"

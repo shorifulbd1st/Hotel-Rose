@@ -3,18 +3,36 @@ import React, { useEffect, useState } from 'react'
 import Rooms from '../pages/Rooms';
 import Room from '../pages/Room'
 import { Link } from 'react-router-dom';
-
+import { useQuery } from '@tanstack/react-query';
+import LoadingSpinner from '../pages/LoadingSpinner';
 const TopRatingRooms = () => {
-    const [rooms, setRooms] = useState([]);
-    useEffect(() => {
-        const topRooms = async () => {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/top-room`)
-            // console.log(data)
-            setRooms(data)
+    // const [rooms, setRooms] = useState([]);
+    // useEffect(() => {
+    //     const topRooms = async () => {
+    //         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/top-room`)
+    //         // console.log(data)
+    //         setRooms(data)
+    //     }
+    //     topRooms()
+    // }, [])
+    // console.log(rooms)
+
+    const { isPending, isError, data: rooms } = useQuery({
+        queryKey: ['rooms'],
+        queryFn: async () => {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/top-room`)
+            return res.json();
         }
-        topRooms()
-    }, [])
-    console.log(rooms)
+    })
+    if (isPending) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
+    if (isError) {
+        return <div><p>Error</p></div>
+    }
+
+
+
     return (
         <div className='w-11/12 mx-auto my-10'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
