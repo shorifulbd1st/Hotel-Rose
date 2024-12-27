@@ -14,8 +14,10 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
     const { _id, image, price, roomCharacteristics, roomId, roomType, startDate: date, maximumGuests } = room
     console.log(room)
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen1, setIsModalOpen1] = useState(false);
 
     const [startDate, setStartDate] = useState(new Date())
+    const [startDate1, setStartDate1] = useState(new Date())
     const loggedInEmail = user?.email;
     const openModal = () => {
         setIsModalOpen(true);
@@ -24,62 +26,22 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
     const closeModal = () => {
         setIsModalOpen(false);
     };
+
+    const openModal1 = () => {
+        setIsModalOpen1(true);
+    };
+
+    const closeModal1 = () => {
+        setIsModalOpen1(false);
+    };
     const navigate = useNavigate();
 
     const handleUpdate = async (e) => {
         e.preventDefault();
         const form = e.target;
-
-
-        // console.log(countryImage, countryName, visaType, processingTime, requiredDocuments, description, ageRestriction, fee, validity, applicationMethod);
-        // const email = user.email;
-        // const visa = { email, countryImage, countryName, visaType, processingTime, requiredDocuments, description, ageRestriction, fee, validity, applicationMethod };
-
-        // console.log(visa)
-        // console.log(_id)
-        // fetch(`https://visa-navigator-portal-server-side.vercel.app/addVisa/${_id}`, {
-        //     method: "PATCH",
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(visa)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         // console.log(data)
-        //         setVisa({ ...visa, _id })
-        //         if (data.modifiedCount > 0) {
-        //             let timerInterval;
-        //             Swal.fire({
-        //                 title: "Updating Data!",
-        //                 html: "Please wait, updating data will complete in <b></b> milliseconds.",
-        //                 timer: 3000,
-        //                 timerProgressBar: true,
-        //                 didOpen: () => {
-        //                     Swal.showLoading();
-        //                     const timer = Swal.getPopup().querySelector("b");
-        //                     timerInterval = setInterval(() => {
-        //                         timer.textContent = `${Swal.getTimerLeft()}`;
-        //                     }, 100);
-        //                 },
-        //                 willClose: () => {
-        //                     clearInterval(timerInterval);
-
-        //                 }
-        //             }).then((result) => {
-        //                 if (result.dismiss === Swal.DismissReason.timer) {
-        //                     // console.log("Data update process completed successfully!");
-        //                 }
-        //             });
-
-        //         }
-
-        //     })
         const data = { startDate }
         try {
             await axios.put(`${import.meta.env.VITE_API_URL}/update-booking-room/${_id}`, data)
-            // form.reset();
-            // toast.success("Data updated Successfully!!!")
             let timerInterval;
             Swal.fire({
                 title: "Updating Data!",
@@ -134,6 +96,28 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
             }
         });
     }
+    const handleReview = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = user?.email;
+        const name = form.name.value;
+        const date = startDate1;
+        const rating = form.rating.value;
+        const comment = form.comment.value;
+        const data = { email, roomId, name, date, rating, comment };
+        console.log(data)
+        try {
+            // await mutateAsync(formData)
+            await axios.post(`${import.meta.env.VITE_API_URL}/add-review/${roomId}`, data)
+            toast.success("Your review Successful!!!")
+            // navigate("/my-booking")
+
+        } catch (err) {
+            // console.log(err)
+            toast.error(err.message)
+        }
+        closeModal1();
+    }
     return (
         <tr>
             <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
@@ -161,7 +145,7 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
             <td className="px-4 py-4 text-sm whitespace-nowrap">
                 <div className="flex items-center gap-x-6">
 
-                    <button
+                    <button onClick={openModal1}
                         className="flex items-center px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform  bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
                     // className="px-6 py-2 text-sm font-medium text-white transition-colors duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
                     >
@@ -278,6 +262,138 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
                         </div>
                     )}
                 </div>
+
+                <div className="relative flex justify-center">
+
+                    {isModalOpen1 && (
+                        <div
+                            className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50"
+                            aria-labelledby="modal-title"
+                            role="dialog"
+                            aria-modal="true"
+                        >
+                            <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+                                <div className="border-2 hover:border-blue-400  duration-300  relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl dark:bg-gray-900 sm:my-8 sm:w-full sm:max-w-sm sm:p-6 sm:align-middle">
+                                    <h3
+                                        className="text-xl font-medium leading-6 text-gray-800 capitalize dark:text-white text-center "
+                                        id="modal-title"
+                                    >
+                                        Review
+                                    </h3>
+                                    <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                                        You can review based on how you liked this room
+                                    </p>
+
+                                    <form onSubmit={handleReview} className="mt-4">
+                                        {/* Email */}
+                                        <label
+                                            htmlFor="email"
+                                            className="block text-sm text-gray-700 dark:text-gray-200"
+                                        >
+                                            Email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            // name='email'
+                                            id="email"
+                                            value={loggedInEmail}
+                                            readOnly
+                                            className="block w-full px-4 py-2 mt-1 text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-md focus:outline-none focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300"
+                                        />
+
+                                        {/* First Name */}
+                                        <label
+                                            htmlFor="firstName"
+                                            className="block mt-3 text-sm text-gray-700 dark:text-gray-200"
+                                        >
+                                            Your Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name='name'
+                                            id="firstName"
+                                            placeholder="Enter your  name"
+                                            className="block w-full px-4 py-2 mt-1 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300"
+                                            required
+                                        />
+
+                                        <div className='flex gap-4'>
+                                            <div>
+                                                <label
+                                                    htmlFor="appliedDate"
+                                                    className="block mt-3 text-sm text-gray-700 dark:text-gray-200"
+                                                >
+                                                    Review Date
+                                                </label>
+
+                                                <DatePicker
+                                                    className='cursor-not-allowed border p-3 rounded-md'
+                                                    readOnly
+                                                    selected={startDate1}
+                                                    onChange={date => setStartDate1(date)}
+                                                />
+                                            </div>
+                                            <div className='w-1/2'>
+                                                <label className="block mt-3 text-sm text-gray-700 dark:text-gray-200 ">Select Rating</label>
+                                                <select
+                                                    name="rating"
+                                                    defaultValue="Rating"
+                                                    className="select select-bordered w-full border "
+                                                >
+                                                    <option disabled >Rating</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <label
+                                            htmlFor="Description"
+                                            className="block text-sm text-gray-500 dark:text-gray-300"
+                                        >
+                                            Enter Your Comment
+                                        </label>
+
+                                        <textarea
+                                            name='comment'
+                                            placeholder="Enter Your Comment..."
+                                            className="block mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded-lg border border-gray-200 bg-white px-4 h-32 py-2.5 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300"
+                                        />
+
+
+
+                                        {/* Buttons */}
+                                        <div className="mt-4 sm:flex sm:items-center sm:-mx-2">
+                                            <button
+                                                type="button"
+                                                onClick={closeModal1}
+                                                className="w-full px-4 py-2 text-sm font-medium tracking-wide text-gray-700 capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:w-1/2 sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+                                            >
+                                                Cancel
+                                            </button>
+                                            <button
+                                                type="submit"
+                                                // onClick={closeModal}
+                                                className="w-full px-4 py-2 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+                                            >
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+
+
+
+
+
 
             </td>
 

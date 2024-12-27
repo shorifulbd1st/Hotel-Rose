@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
@@ -6,6 +6,7 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Review from './Review';
 
 const RoomDetails = () => {
     const room = useLoaderData();
@@ -15,6 +16,24 @@ const RoomDetails = () => {
     // console.log(room)
     const { _id, booking, image, maximumGuests, roomType, roomCharacteristics, price, description, facilities } = room;
     const { mediaAndTechnology, bedroomFacilities, others, foodAndDrink } = facilities;
+
+
+
+
+    const [reviews, setReviews] = useState([])
+    useEffect(() => {
+        const allReview = async () => {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-review/${_id}`)
+            // console.log(data)
+            setReviews(data)
+        }
+        allReview()
+    }, [])
+    // console.log(reviews.length)
+    // console.log(reviews)
+
+
+
 
 
     const [startDate, setStartDate] = useState(new Date())
@@ -42,30 +61,12 @@ const RoomDetails = () => {
             roomType,
             roomCharacteristics
         };
-        console.log(data)
-
-        // fetch('https://visa-navigator-portal-server-side.vercel.app/applyVisa', {
-        //     method: "POST",
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         if (data.insertedId) {
-        //             notify('success', 'Your visa application has been successful.!')
-        //         }
-        //     });
-        // form.reset();
         try {
-            // await mutateAsync(formData)
             await axios.post(`${import.meta.env.VITE_API_URL}/room-booking/${_id}`, data)
             toast.success("Booking Successfully!!!")
             navigate("/my-booking")
 
         } catch (err) {
-            // console.log(err)
             toast.error(err.message)
         }
 
@@ -208,7 +209,7 @@ const RoomDetails = () => {
                             {
                                 booking === true ? <button disabled
 
-                                    className="cursor-not-allowed px-6 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-400 transition-colors duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+                                    className="cursor-not-allowed px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80"
                                 >
                                     This room Unavailable
                                 </button> : <button
@@ -224,8 +225,11 @@ const RoomDetails = () => {
             </div>
 
             {/* for review */}
-            <div className=''>
 
+            <div>
+                {
+                    reviews.map(review => <Review key={review._id} review={review}></Review>)
+                }
             </div>
 
             {/* Modal */}
