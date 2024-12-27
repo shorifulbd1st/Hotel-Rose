@@ -6,7 +6,7 @@ const Review = ({ review }) => {
     const { name, date, rating, comment } = review;
     return (
         <div>
-            <div className="w-1/2 my-10 border border-blue-400 px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div className="  border border-blue-400 p-4 bg-white rounded-lg dark:bg-gray-800">
                 <div className="mt-0">
                     <div className='flex items-center gap-5'>
                         <p
