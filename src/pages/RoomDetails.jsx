@@ -72,8 +72,7 @@ const RoomDetails = () => {
             openModal()
         }
         else {
-            // console.log('object')
-            navigate('/signin', { state: { from: location.pathname } });
+            navigate('/signin')
         }
     }
     return (

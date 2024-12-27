@@ -9,10 +9,9 @@ const SignIn = () => {
     const { handleLogin, notify } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    // const from = location.state || '/';
+    const from = location.state || '/';
     // console.log(from)
-    const from = location.state?.from || '/';
-    // console.log(from)
+    console.log(from)
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
