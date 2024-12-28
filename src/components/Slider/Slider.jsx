@@ -2,16 +2,30 @@
 
 import { useRef, useEffect } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
     const sliderRef = useRef(null);
     const thumbnailRef = useRef(null);
 
     const sliderItems = [
-        { img: 'https://info.ehl.edu/hubfs/Imported_Blog_Media/Hotel-design.jpg', title: "MAGIC SLIDER", type: "FLOWER" },
-        { img: 'https://images.squarespace-cdn.com/content/v1/6379dddff98aeb7914af0071/921a2ac2-10d4-4294-b0c5-7cccbf6a5067/View_04.jpg', title: "MAGIC SLIDER", type: "NATURE" },
-        { img: 'https://www.lakdi.com/cdn/shop/articles/Hotel_Guest_Room_Design_and_Color.webp?v=1734176624', title: "MAGIC SLIDER", type: "PLANT" },
-        { img: 'https://i.pinimg.com/originals/da/b3/be/dab3bef5faf9fa552169c9f97d91515e.jpg', title: "MAGIC SLIDER", type: "NATURE" },
+        {
+            img: 'https://info.ehl.edu/hubfs/Imported_Blog_Media/Hotel-design.jpg',
+            title: "Luxurious Escape",
+            type: "Deluxe Suite"
+        },
+        {
+            img: 'https://images.squarespace-cdn.com/content/v1/6379dddff98aeb7914af0071/921a2ac2-10d4-4294-b0c5-7cccbf6a5067/View_04.jpg', title: "Cozy Retreat",
+            type: "Mountain View"
+        },
+        {
+            img: 'https://www.lakdi.com/cdn/shop/articles/Hotel_Guest_Room_Design_and_Color.webp?v=1734176624', title: "Modern Comfort",
+            type: "Executive Room"
+        },
+        {
+            img: 'https://i.pinimg.com/originals/da/b3/be/dab3bef5faf9fa552169c9f97d91515e.jpg', title: "Serene Haven",
+            type: "Ocean View"
+        },
     ];
 
     // Function to move slider
@@ -52,9 +66,8 @@ const Slider = () => {
     }, []);
 
     return (
-        <div className="slider" ref={sliderRef}>
+        <div className="slider " ref={sliderRef}>
             {/* Slider List */}
-
             <div className="list">
                 {sliderItems.map((item, index) => (
                     <div className="item" key={index}>
@@ -63,7 +76,7 @@ const Slider = () => {
                             <div className="title text-xl">{item.title}</div>
                             <div className="type text-xl">{item.type}</div>
                             <div className="button">
-                                <button>SEE MORE</button>
+                                <Link to="/rooms" className="px-4 w-full text-center py-2.5 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40 sm:mt-0 sm:mx-2">SEE MORE</Link>
                             </div>
                         </div>
                     </div>

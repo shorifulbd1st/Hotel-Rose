@@ -10,10 +10,10 @@ const Rooms = () => {
     const [rooms, setRooms] = useState(data);
     return (
         <div className='w-11/12 mx-auto my-5'>
-            {/* <Helmet>
+            <Helmet>
                 <title>My Title</title>
                 <meta name="description" content="Helmet application" />
-            </Helmet> */}
+            </Helmet>
             <div className='mb-5'>
                 <SelectHotelSection setRooms={setRooms}></SelectHotelSection>
             </div>

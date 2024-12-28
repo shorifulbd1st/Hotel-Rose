@@ -125,7 +125,7 @@ header a:hover {
     bottom: 50px;
     left: 60%;
     width: max-content;
-    z-index: 100;
+    z-index: 10;
     display: flex;
     gap: 20px;
 }
@@ -151,7 +151,7 @@ header a:hover {
     position: absolute;
     top: 80%;
     right: 52%;
-    z-index: 100;
+    z-index: 10;
     width: 300px;
     max-width: 30%;
     display: flex;
@@ -248,7 +248,7 @@ header a:hover {
 }
 
 .slider.prev .list .item img {
-    z-index: 100;
+    z-index: 10;
 }
 
 

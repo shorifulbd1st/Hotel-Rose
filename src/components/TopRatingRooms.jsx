@@ -47,7 +47,7 @@ const TopRatingRooms = () => {
 
                 {isOpen && (
                     <div
-                        className="fixed inset-0 z-50 overflow-y-auto "
+                        className="fixed inset-0 z-[1020] overflow-y-auto "
                         aria-labelledby="modal-title"
                         role="dialog"
                         aria-modal="true"

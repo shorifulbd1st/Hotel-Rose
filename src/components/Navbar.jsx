@@ -21,7 +21,7 @@ const Navbar = () => {
     const { user, handleLogout } = useContext(AuthContext)
 
     return (
-        <div className='sticky top-0 z-40 '>
+        <div className='sticky top-0 z-[1000] '>
             <nav className="relative bg-white shadow dark:bg-gray-800 ">
                 <div className="w-11/12 py-4 mx-auto">
                     <div className="lg:flex justify-between">
