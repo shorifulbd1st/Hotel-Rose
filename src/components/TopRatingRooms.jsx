@@ -6,16 +6,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../pages/LoadingSpinner';
 const TopRatingRooms = () => {
-    // const [rooms, setRooms] = useState([]);
-    // useEffect(() => {
-    //     const topRooms = async () => {
-    //         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/top-room`)
-    //         // console.log(data)
-    //         setRooms(data)
-    //     }
-    //     topRooms()
-    // }, [])
-    // console.log(rooms)
+
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -36,8 +27,6 @@ const TopRatingRooms = () => {
         return <div><p>Error</p></div>
     }
 
-
-
     return (
         <div className='w-11/12 mx-auto my-10'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -53,29 +42,8 @@ const TopRatingRooms = () => {
                     See All Rooms
                 </Link>
             </div>
-
-
-            {/* You can open the modal using document.getElementById('ID').showModal() method */}
-            {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button>
-            <dialog id="my_modal_3" className="modal">
-                <div className="modal-box">
-                    <form method="dialog">
-                        if there is a button in form, it will close the modal
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    </form>
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">Press ESC key or click on ✕ button to close</p>
-                </div>
-            </dialog> */}
-
-
             <div className="relative flex justify-center">
-                {/* <button
-                    onClick={() => setIsOpen(true)}
-                    className="px-6 py-2 mx-auto tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
-                >
-                    Open Modal
-                </button> */}
+
 
                 {isOpen && (
                     <div
@@ -119,19 +87,23 @@ const TopRatingRooms = () => {
                                     </p>
                                 </div>
 
-                                <div className="mt-4 sm:flex sm:items-center sm:justify-between sm:mt-6 sm:-mx-2">
+
+                                <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between sm:mt-6 sm:-mx-2">
                                     <button
                                         onClick={() => setIsOpen(false)}
-                                        className="px-4 sm:mx-2 w-full py-2.5 text-sm font-medium dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 tracking-wide capitalize transition-colors duration-300 transform border border-gray-200 rounded-md hover:bg-red-300 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40 bg-red-500 text-white  "
+                                        className="px-4 w-full py-2.5 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border border-gray-200 rounded-md bg-red-500 text-white hover:bg-red-400 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-40 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 sm:mx-2"
                                     >
                                         Close
                                     </button>
 
-                                    <Link to={'/rooms'} className="px-4 sm:mx-2 text-center w-full py-2.5 mt-3 sm:mt-0 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-md hover:bg-green-500  focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40">
+                                    <Link
+                                        to={'/rooms'}
+                                        className="px-4 w-full text-center py-2.5 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40 sm:mt-0 sm:mx-2"
+                                    >
                                         See Details
                                     </Link>
-
                                 </div>
+
                             </div>
                         </div>
                     </div>
