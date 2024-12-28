@@ -23,6 +23,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from '../firebase/firebase.config';
+import axios from 'axios';
 
 
 export const AuthContext = createContext();
@@ -74,18 +75,20 @@ const AuthProvider = ({ children }) => {
     const forgetPassword = (email) => {
         return sendPasswordResetEmail(auth, email);
     }
-    useEffect(() => {
-        console.log('user--->', user)
-    }, [user])
+    // useEffect(() => {
+    //     console.log('user--->', user)
+    // }, [user])
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser) {
-                // console.log(currentUser)
-                setUser(currentUser);
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+            setUser(currentUser);
+
+            if (currentUser?.email) {
+                await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, { email: currentUser?.email }, { withCredentials: true })
+                // console.log(data)
             }
             else {
-                setUser(null)
+                await axios.get(`${import.meta.env.VITE_API_URL}/logout`, { withCredentials: true })
             }
             setLoading(false);
         })

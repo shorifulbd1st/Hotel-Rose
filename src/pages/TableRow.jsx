@@ -12,7 +12,7 @@ import { toast } from 'react-toastify';
 const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
     const { user } = useContext(AuthContext)
     const { _id, image, price, roomCharacteristics, roomId, roomType, startDate: date, maximumGuests } = room
-    console.log(room)
+    // console.log(room)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isModalOpen1, setIsModalOpen1] = useState(false);
 
@@ -85,7 +85,7 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                console.log(id)
+                // console.log(id)
                 await axios.post(`${import.meta.env.VITE_API_URL}/booking-delete/${id}`, { id1 })
                 allBookingRoom();
                 Swal.fire({
@@ -105,7 +105,7 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
         const rating = parseInt(form.rating.value);
         const comment = form.comment.value;
         const data = { email, roomId, name, date, rating, comment };
-        console.log(data)
+        // console.log(data)
         try {
             // await mutateAsync(formData)
             await axios.post(`${import.meta.env.VITE_API_URL}/add-review/${roomId}`, data)

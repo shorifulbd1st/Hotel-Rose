@@ -8,7 +8,7 @@ import axios from "axios";
 function SelectHotelSection({ setRooms }) {
     const [selectPrice, setSelectPrice] = useState("");
     const val = selectPrice.split('-');
-    console.log(val[0], val[1])
+    // console.log(val[0], val[1])
     useEffect(() => {
         // console.log('selectPrice', selectPrice)
         if (selectPrice === "All visa" || selectPrice === "") {
@@ -22,14 +22,14 @@ function SelectHotelSection({ setRooms }) {
             fetch(`${import.meta.env.VITE_API_URL}/rooms-by-price?minPrice=${val[0]}&maxPrice=${val[1]}`)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     setRooms(data)
                 })
         }
 
     }, [selectPrice])
 
-    console.log(selectPrice)
+    // console.log(selectPrice)
     return (
         <div
             className="bg-cover bg-center bg-no-repeat py-8 -mt-4 rounded-xl relative"

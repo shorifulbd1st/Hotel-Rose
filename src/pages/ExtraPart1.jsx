@@ -4,6 +4,8 @@ import Lottie from "lottie-react";
 import office from "../assets/office.json";
 import waiting from "../assets/waiting.json"
 import room from '../assets/rooms.json'
+import { motion } from "motion/react"
+import { easeOut } from 'motion'
 const ExtraPart1 = () => {
     return (
         <div className='w-11/12 mx-auto'>

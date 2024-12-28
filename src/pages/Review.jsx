@@ -2,7 +2,7 @@ import React from 'react'
 import Stars from 'react-stars';
 import { format } from "date-fns"
 const Review = ({ review }) => {
-    console.log(review)
+    // console.log(review)
     const { name, date, rating, comment } = review;
     return (
         <div>
