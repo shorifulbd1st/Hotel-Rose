@@ -17,8 +17,6 @@ function SelectHotelSection({ setRooms }) {
                 .then(data => {
                     setRooms(data)
                 })
-
-
         }
         else {
             fetch(`${import.meta.env.VITE_API_URL}/rooms-by-price?minPrice=${val[0]}&maxPrice=${val[1]}`)
