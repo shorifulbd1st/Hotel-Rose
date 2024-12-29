@@ -5,6 +5,8 @@ import Room from '../pages/Room'
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../pages/LoadingSpinner';
+
+import { motion } from "motion/react"
 const TopRatingRooms = () => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +30,11 @@ const TopRatingRooms = () => {
     }
 
     return (
-        <div className='w-11/12 mx-auto my-10'>
+        <div className='w-11/12 mx-auto mt-3 mb-2'>
+            <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500 drop-shadow-lg">
+                Our six top-rated rooms
+            </h1>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
                     rooms.map((room, idx) => <Room key={room._id} room={room}></Room>)

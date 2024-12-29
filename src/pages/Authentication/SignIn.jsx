@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Lottie from 'lottie-react';
 import signInAnimation from '../../assets/SignIn.json'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import SocialLogin from './SocialLogin';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -11,7 +11,7 @@ const SignIn = () => {
     const location = useLocation();
     const from = location.state || '/';
     // console.log(from)
-    console.log(from)
+    // console.log(from)
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -19,7 +19,7 @@ const SignIn = () => {
         const password = form.password.value;
         handleLogin(email, password)
             .then(res => {
-                console.log(res.user)
+                // console.log(res.user)
                 const user = { email: email };
                 // axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
                 //     .then(res => {
@@ -32,7 +32,7 @@ const SignIn = () => {
 
             })
             .catch(error => {
-                console.log('error', error.message)
+                // console.log('error', error.message)
             })
     }
     return (
@@ -66,6 +66,7 @@ const SignIn = () => {
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
+                        <p className='text-center font-bold mt-2'>Don't Have An Account? <Link to='/registration' className='text-red-500'>Register</Link> </p>
                     </div>
                 </div>
             </div>

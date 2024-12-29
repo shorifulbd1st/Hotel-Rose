@@ -8,6 +8,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import Review from './Review';
+import Review1 from './Review1';
 
 const RoomDetails = () => {
     const room = useLoaderData();
@@ -76,7 +77,7 @@ const RoomDetails = () => {
         }
     }
     return (
-        <div className='w-11/12 mx-auto my-5'>
+        <div className='w-11/12 mx-auto my-5 '>
             <div className="w-full overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 border-2 hover:border-blue-400 transition duration-300">
                 <div className='grid grid-cols-1 lg:grid-cols-2'>
                     <div>
@@ -240,7 +241,7 @@ const RoomDetails = () => {
 
             <div>
                 {
-                    reviews.length > 0 ? reviews.map(review => <Review key={review._id} review={review}></Review>) :
+                    reviews.length > 0 ? reviews.map(review => <Review1 key={review._id} review={review}></Review1>) :
                         <span className="block w-fit capitalize text-xl my-5 py-2  font-medium text-red-500 rounded-lg  transition-colors duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">No reviews were found for this room.</span>
                 }
             </div>
@@ -251,7 +252,7 @@ const RoomDetails = () => {
 
                 {isModalOpen && (
                     <div
-                        className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50"
+                        className="fixed inset-0 z-[1020] overflow-y-auto bg-black bg-opacity-50"
                         aria-labelledby="modal-title"
                         role="dialog"
                         aria-modal="true"

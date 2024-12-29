@@ -6,7 +6,7 @@ import { MdRateReview } from "react-icons/md";
 import { AuthContext } from '../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import DatePicker from 'react-datepicker';
-
+import { Helmet } from "react-helmet";
 import 'react-datepicker/dist/react-datepicker.css'
 import TableRow from './TableRow';
 const MyBooking = () => {
@@ -28,6 +28,10 @@ const MyBooking = () => {
     return (
         <div>
             <div className="container px-4 mx-auto my-10">
+                <Helmet>
+                    <title>My Booking Rooms</title>
+                    <meta name="description" content="Helmet application" />
+                </Helmet>
                 <div className="flex items-center gap-x-3">
                     <h2 className="text-lg font-medium text-gray-800 dark:text-white">Total Rooms</h2>
                     <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400"> {bookingRooms.length} </span>

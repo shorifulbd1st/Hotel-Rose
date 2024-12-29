@@ -1,7 +1,7 @@
 import Lottie from 'lottie-react'
 import React, { useContext, useState } from 'react'
 import registerLottieAnimation from '../../assets/Animation - 1733900618816.json'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { AuthContext } from '../../providers/AuthProvider';
 const Register = () => {
@@ -123,6 +123,7 @@ const Register = () => {
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
+                        <p className='text-center font-bold'>Already Have An Account? <Link to='/signin' className='text-red-500'>Login</Link> </p>
                     </div>
                 </div>
             </div>

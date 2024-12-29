@@ -2,11 +2,11 @@ import React from 'react'
 import Stars from 'react-stars';
 import { format } from "date-fns"
 import { useLocation } from 'react-router-dom';
-const Review = ({ review }) => {
+const Review1 = ({ review }) => {
     const { name, date, rating, comment } = review;
     return (
         <div>
-            <div className="text-left h-60 border mt-5 border-blue-400 p-4 bg-white rounded-lg dark:bg-gray-800">
+            <div className="text-left border lg:w-3/5 mt-5 border-blue-400 p-4 bg-white rounded-lg dark:bg-gray-800">
                 <div className="mt-0">
                     <div className='flex items-center gap-5'>
                         <p
@@ -49,4 +49,4 @@ const Review = ({ review }) => {
     )
 }
 
-export default Review
+export default Review1

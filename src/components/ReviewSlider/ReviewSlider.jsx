@@ -9,6 +9,8 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import axios from 'axios';
 import Review from '../../pages/Review';
 
+import { motion } from "motion/react"
+
 const ReviewSlider = () => {
     const [ratingRooms, setRatingRooms] = useState([]);
 
@@ -21,7 +23,11 @@ const ReviewSlider = () => {
     }, []);
 
     return (
-        <div className="my-10 w-11/12 mx-auto py-8 ">
+        <div className="w-11/12 mx-auto pt-2 pb-8 ">
+
+            <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-lg">
+                Our user review
+            </h1>
             <Swiper
                 slidesPerView={1} // Default for mobile
                 spaceBetween={10}

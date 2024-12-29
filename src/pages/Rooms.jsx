@@ -11,7 +11,7 @@ const Rooms = () => {
     return (
         <div className='w-11/12 mx-auto my-5'>
             <Helmet>
-                <title>My Title</title>
+                <title>All Rooms</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <div className='mb-5'>

@@ -11,13 +11,13 @@ const SocialLogin = () => {
     const handleGoogleSignIn = () => {
         handleGoogleLogin()
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
                 notify('success', 'Google Login successfully');
                 navigate(from)
 
             })
             .catch(error => {
-                console.log(error.message)
+                // console.log(error.message)
             })
     }
 

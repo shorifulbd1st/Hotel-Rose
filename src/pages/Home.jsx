@@ -5,6 +5,7 @@ import ReviewSlider from '../components/ReviewSlider/ReviewSlider'
 import ExtraPart1 from './ExtraPart1'
 import Map from '../components/Map'
 import MapComponent from '../components/MapComponent'
+import NewService from '../components/NewService'
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <ReviewSlider></ReviewSlider>
             <ExtraPart1></ExtraPart1>
             {/* <Map></Map> */}
+            <NewService></NewService>
             <MapComponent></MapComponent>
 
         </div>

@@ -175,7 +175,7 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
 
                     {isModalOpen && (
                         <div
-                            className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50"
+                            className="fixed inset-0 z-[1020] overflow-y-auto bg-black bg-opacity-50"
                             aria-labelledby="modal-title"
                             role="dialog"
                             aria-modal="true"
@@ -267,7 +267,7 @@ const TableRow = ({ room, setBookingRooms, allBookingRoom }) => {
 
                     {isModalOpen1 && (
                         <div
-                            className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50"
+                            className="fixed inset-0 z-[1020] overflow-y-auto bg-black bg-opacity-50"
                             aria-labelledby="modal-title"
                             role="dialog"
                             aria-modal="true"
