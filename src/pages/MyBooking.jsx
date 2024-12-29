@@ -9,14 +9,16 @@ import DatePicker from 'react-datepicker';
 import { Helmet } from "react-helmet";
 import 'react-datepicker/dist/react-datepicker.css'
 import TableRow from './TableRow';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 const MyBooking = () => {
     const [bookingRooms, setBookingRooms] = useState([])
     const { user } = useContext(AuthContext);
+    const axiosSecure = useAxiosSecure();
     useEffect(() => {
         allBookingRoom()
     }, [user?.email])
     const allBookingRoom = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-BookingRooms/${user?.email}`, {
+        const { data } = await axiosSecure.get(`${import.meta.env.VITE_API_URL}/all-BookingRooms/${user?.email}`, {
             withCredentials: true,
         })
         // console.log(data)
