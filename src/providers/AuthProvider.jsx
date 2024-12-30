@@ -33,9 +33,9 @@ const AuthProvider = ({ children }) => {
 
     const notify = (value, message) => {
         if (value == 'success')
-            toast.success(`${message}`);
+            toast.success(`${message}`, { toastId: 'hello' });
         else
-            toast.error(`${message}`)
+            toast.error(`${message}`, { toastId: 'hello' })
 
     };
 
