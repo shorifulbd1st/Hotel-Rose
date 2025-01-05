@@ -18,7 +18,7 @@ const SingleRoom = ({ room }) => {
     return (
         <Link to={`/room-details/${_id}`} title='view details' className=' hover:scale-[1.05] transition-all duration-500 ease-in-out '  >
 
-            <div data-aos="fade-up" data-aos-duration="500" className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:border border-blue-400">
+            <div className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:border border-blue-400">
                 <img
                     className="object-cover object-center w-full h-56"
                     src={image}

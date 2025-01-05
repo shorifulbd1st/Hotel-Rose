@@ -19,7 +19,7 @@ const Home = () => {
             <ExtraPart1></ExtraPart1>
             {/* <Map></Map> */}
             <NewService></NewService>
-            <MapComponent></MapComponent>
+            {/* <MapComponent></MapComponent> */}
 
         </div>
     )

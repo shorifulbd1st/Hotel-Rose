@@ -31,7 +31,7 @@ const TopRatingRooms = () => {
 
     return (
         <div className='w-11/12 mx-auto mt-3 mb-2'>
-            <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500 drop-shadow-lg">
+            <h1 className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500 drop-shadow-lg">
                 Our six top-rated rooms
             </h1>
 
