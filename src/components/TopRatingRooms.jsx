@@ -11,26 +11,27 @@ import Sort from '../pages/Sort';
 const TopRatingRooms = () => {
     const [sort, setSort] = useState('')
     const [isOpen, setIsOpen] = useState(false);
-
+    const [rooms1, setRooms] = useState([])
     useEffect(() => {
         setIsOpen(true)
     }, [])
 
     useEffect(() => {
-        const fetchAllJobs = async () => {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-rooms?sort=${sort}`)
-            setJobs(data);
+        const fetchAllRooms = async () => {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/tpp-room?sort=${sort}`)
+            setRooms(data);
         }
-        fetchAllJobs()
-    }, [filter, search, sort])
+        fetchAllRooms()
+    }, [sort])
 
     const { isPending, isError, data: rooms } = useQuery({
         queryKey: ['rooms'],
         queryFn: async () => {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/top-room?sort=${sort}`)
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/top-room`)
             return res.json();
         }
     })
+
     if (isPending) {
         return <LoadingSpinner></LoadingSpinner>
     }
@@ -38,7 +39,9 @@ const TopRatingRooms = () => {
         return <div><p>Error</p></div>
     }
 
+
     console.log(rooms, rooms.length)
+    console.log(rooms1, rooms1.length)
     // console.log(filter)
     // console.log(search)
     console.log(sort)
