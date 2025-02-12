@@ -118,6 +118,15 @@ const Navbar = () => {
                                 >
                                     About Us
                                 </NavLink>
+                                <NavLink
+                                    to="/contact"
+                                    className={({ isActive }) =>
+                                        `inline-block px-2 py-2 mx-3 mt-2 text-white transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 ${isActive ? "bg-green-500 text-white" : ""
+                                        }`
+                                    }
+                                >
+                                    Contact Us
+                                </NavLink>
                             </div>
 
                             {/* User Actions */}

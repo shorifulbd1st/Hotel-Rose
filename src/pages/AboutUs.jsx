@@ -29,39 +29,20 @@ const AboutUs = () => {
                 }}
             >
 
-                {/* <div className="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div> */}
-
 
                 <div className="w-11/12 relative z-10 bg-black bg-opacity-50 px-2 py-5 rounded-lg lg:max-w-2xl mx-auto text-center">
                     <h1 className="my-3 font-bold text-3xl text-white  underline underline-offset-4 decoration-[#C70039]">
                         About Us
                     </h1>
-                    {/* <h1 className="mb-3 font-bold text-2xl text-white underline underline-offset-4 decoration-[#C70039]">
-                        About Us
-                    </h1> */}
+
                     <p className="text-white text-lg">
                         Hotel Rose offers a seamless hotel booking experience with secure payments, diverse accommodations, 24/7 support, and a user-friendly interface.
                     </p>
                 </div>
             </div >
 
-
-
             <div className="w-11/12 mx-auto py-5">
-                {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <div className="border border-red-600">
-                        <img className="rounded-lg" src="https://images.pexels.com/photos/3155726/pexels-photo-3155726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    </div>
-                    <div className="flex flex-col justify-center">
-                        <h1 className="mb-3 font-bold text-2xl underline underline-offset-4 decoration-[#C70039]">
-                            About Us
-                        </h1>
-                        <p>Hotel Rose is an online platform offering a seamless and hassle-free hotel booking experience. We provide a wide range of accommodations, catering to the needs of every traveler, whether for business, leisure, or special occasions. Our goal is to make travel more accessible by offering a variety of options to suit different preferences and budgets.</p>
-                        <p>
-                            At Hotel Rose, we believe in enhancing your journey, not just providing a place to stay. Our user-friendly website allows you to easily search and book rooms, explore amenities, and discover special offers. With top-rated hotels worldwide, we ensure a comfortable and memorable experience for every guest.
-                        </p>
-                    </div>
-                </div> */}
+
                 <section className="bg-white dark:bg-gray-900">
                     <div className="w-11/12  mx-auto">
                         <div className="lg:-mx-6 lg:flex lg:items-center">
@@ -88,39 +69,6 @@ const AboutUs = () => {
                                 <h3 className="mt-6 text-lg font-medium text-blue-500">Mia Brown</h3>
                                 <p className="text-gray-600 dark:text-gray-300">CEO, Hotel Rose</p>
 
-                                {/* <div className="flex items-center justify-between mt-12 lg:justify-start">
-                                    <button
-                                        title="left arrow"
-                                        className="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="w-6 h-6"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                                        </svg>
-                                    </button>
-
-                                    <button
-                                        title="right arrow"
-                                        className="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="w-6 h-6"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </button>
-                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -130,13 +78,8 @@ const AboutUs = () => {
                 <section className="bg-white dark:bg-gray-900">
 
                     <div className="w-11/12 py-5 mx-auto">
-                        {/* <p className="text-xl font-medium tracking-tight text-white text-center"></p> */}
                         <p className="text-3xl font-semibold text-blue-500 my-5 text-center">“ <span className="text-[#C70039]">WHY GUEST CHOOSE HOTEL ROSE?</span></p>
-                        {/* <p className="text-xl font-medium text-blue-500">Testimonials</p>
 
-                        <h1 className="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-                            What clients are saying
-                        </h1> */}
 
                         <main className="relative z-20 w-full mt-8 md:flex md:flex-row-reverse md:items-center xl:mt-12">
                             <div className="absolute w-full bg-blue-600 -z-10 md:h-96 rounded-2xl"></div>

@@ -35,7 +35,7 @@ const TopRatingRooms = () => {
                 Our six top-rated rooms
             </h1>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {
                     rooms.map((room, idx) => <Room key={room._id} room={room}></Room>)
                 }
