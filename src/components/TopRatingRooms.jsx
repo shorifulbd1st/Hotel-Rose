@@ -7,18 +7,27 @@ import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../pages/LoadingSpinner';
 
 import { motion } from "motion/react"
+import Sort from '../pages/Sort';
 const TopRatingRooms = () => {
-
+    const [sort, setSort] = useState('')
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         setIsOpen(true)
     }, [])
 
+    useEffect(() => {
+        const fetchAllJobs = async () => {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-rooms?sort=${sort}`)
+            setJobs(data);
+        }
+        fetchAllJobs()
+    }, [filter, search, sort])
+
     const { isPending, isError, data: rooms } = useQuery({
         queryKey: ['rooms'],
         queryFn: async () => {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/top-room`)
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/top-room?sort=${sort}`)
             return res.json();
         }
     })
@@ -29,12 +38,37 @@ const TopRatingRooms = () => {
         return <div><p>Error</p></div>
     }
 
+    console.log(rooms, rooms.length)
+    // console.log(filter)
+    // console.log(search)
+    console.log(sort)
+    // const handleReset = () => {
+    //     // setFilter('')
+    //     // setSearch('')
+    //     setSort('')
+    // }
+
     return (
         <div className='w-11/12 mx-auto mt-3 mb-2'>
             <h1 className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-[#C70039]">
                 Our six top-rated rooms
             </h1>
-
+            <div className='my-5'>
+                <div>
+                    <select
+                        name='category'
+                        id='category'
+                        className='border p-4 rounded-md px-3'
+                        onChange={e => setSort(e.target.value)}
+                        value={sort}
+                    >
+                        <option value=''>Sort By Price</option>
+                        <option value='dsc'>Descending Order</option>
+                        <option value='asc'>Ascending Order</option>
+                    </select>
+                </div>
+                {/* <button onClick={handleReset} className='btn'>Reset</button> */}
+            </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {
                     rooms.map((room, idx) => <Room key={room._id} room={room}></Room>)
