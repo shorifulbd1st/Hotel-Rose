@@ -52,8 +52,12 @@ const Register = () => {
 
     }
     return (
-        <div className='w-11/12 mx-auto'>
-            <div className="hero bg-base-200 min-h-screen">
+        <div className=' mx-auto bg-cover bg-no-repeat bg-center' style={{
+            backgroundImage: "url(https://img.freepik.com/premium-vector/abstract-design-concept-technology-networking-science_29865-364.jpg?w=826)",
+        }}>
+            <div className="hero min-h-screen"
+
+            >
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left max-w-sm ">
                         <Lottie animationData={registerLottieAnimation}></Lottie>

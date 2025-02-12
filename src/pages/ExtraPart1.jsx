@@ -8,14 +8,14 @@ import { motion } from "motion/react"
 import { easeOut } from 'motion'
 const ExtraPart1 = () => {
     return (
-        <div className='w-11/12 mx-auto'>
+        <div data-aos="fade-up" data-aos-duration="1500" className='w-11/12 mx-auto rounded-xl border border-red-300'>
 
-            <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 drop-shadow-lg">
+            <h1 className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-[#C70039]">
                 Our service teams
             </h1>
 
 
-            <div className="bg-base-200 ">
+            <div className=" rounded-xl">
                 <div className="md:flex justify-between">
                     <div className="text-center lg:text-left h-64">
                         <Lottie className='h-full' animationData={room} loop={true} />

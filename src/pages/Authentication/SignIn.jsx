@@ -35,9 +35,12 @@ const SignIn = () => {
                 // console.log('error', error.message)
             })
     }
+
     return (
-        <div className='w-11/12 mx-auto'>
-            <div className="hero bg-base-200 min-h-screen">
+        <div className='bg-cover bg-no-repeat bg-center' style={{
+            backgroundImage: "url(https://img.freepik.com/free-vector/abstract-technology-betwork-wire-mesh-background_1017-17263.jpg?t=st=1739295112~exp=1739298712~hmac=69807cab9a12fcb4529398a972142123eb05e29fb77aec3a17e8ba17e61db83c&w=740)",
+        }}>
+            <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left max-w-sm ">
                         <Lottie animationData={signInAnimation}></Lottie>
