@@ -23,9 +23,9 @@ const ReviewSlider = () => {
     }, []);
 
     return (
-        <div className="w-11/12 mx-auto pt-2 pb-8 ">
+        <div data-aos="fade-up" data-aos-duration="1500" className="w-11/12 mx-auto pt-2 pb-8">
 
-            <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-lg">
+            <h1 className="text-3xl capitalize lg:text-4xl mb-5 font-extrabold text-center text-[#C70039] drop-shadow-lg">
                 Our user review
             </h1>
             <Swiper

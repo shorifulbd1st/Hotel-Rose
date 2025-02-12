@@ -4,10 +4,10 @@ import { motion } from "motion/react"
 import { easeOut } from 'motion'
 const NewService = () => {
     return (
-        <div className='w-11/12 mx-auto my-10 space-y-4'>
+        <div data-aos="fade-up" data-aos-duration="1500" className='w-11/12 mx-auto my-10 space-y-4'>
 
 
-            <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 drop-shadow-lg">
+            <h1 className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-[#C70039]">
                 Our new service coming soon
             </h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
