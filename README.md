@@ -12,7 +12,7 @@
 ## 🚀 Live Links
 
 - **Client Repo:** This repository serves as the main `Hotel-Rose` platform and includes the `frontend` setup.
-- **Live Site:** [_HotelRose.com_]((https://hotel-rose-1e441.web.app)
+- **Live Site:** [_HotelRose.com_](https://hotel-rose-1e441.web.app)
 
 ---
 
