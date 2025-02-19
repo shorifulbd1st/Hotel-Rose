@@ -9,20 +9,14 @@ import LoadingSpinner from '../pages/LoadingSpinner';
 import { motion } from "motion/react"
 import Sort from '../pages/Sort';
 const TopRatingRooms = () => {
-    const [sort, setSort] = useState('')
+    // const [sort, setSort] = useState('')
     const [isOpen, setIsOpen] = useState(false);
-    const [rooms1, setRooms] = useState([])
+    // const [rooms1, setRooms] = useState([])
+    const [sortBy, setSortBy] = useState(false)
     useEffect(() => {
         setIsOpen(true)
     }, [])
 
-    useEffect(() => {
-        const fetchAllRooms = async () => {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/tpp-room?sort=${sort}`)
-            setRooms(data);
-        }
-        fetchAllRooms()
-    }, [sort])
 
     const { isPending, isError, data: rooms } = useQuery({
         queryKey: ['rooms'],
@@ -39,38 +33,42 @@ const TopRatingRooms = () => {
         return <div><p>Error</p></div>
     }
 
+    const handleSort = (val) => {
+        // console.log(val)
+        setSortBy(!sortBy)
+        if (val === 'asc') {
+            rooms.sort((a, b) => a.price - b.price);
+        }
+        else {
+            rooms.sort((a, b) => b.price - a.price)
+        }
 
-    console.log(rooms, rooms.length)
-    console.log(rooms1, rooms1.length)
-    // console.log(filter)
-    // console.log(search)
-    console.log(sort)
-    // const handleReset = () => {
-    //     // setFilter('')
-    //     // setSearch('')
-    //     setSort('')
-    // }
-
+    }
+    // console.log(sortBy)
     return (
         <div className='w-11/12 mx-auto mt-3 mb-2'>
             <h1 className="text-3xl capitalize lg:text-4xl my-5 font-extrabold text-center text-[#C70039]">
                 Our six top-rated rooms
             </h1>
-            <div className='my-5'>
-                <div>
-                    <select
-                        name='category'
-                        id='category'
-                        className='border p-4 rounded-md px-3'
-                        onChange={e => setSort(e.target.value)}
-                        value={sort}
-                    >
-                        <option value=''>Sort By Price</option>
-                        <option value='dsc'>Descending Order</option>
-                        <option value='asc'>Ascending Order</option>
-                    </select>
-                </div>
-                {/* <button onClick={handleReset} className='btn'>Reset</button> */}
+
+            <div className='mb-5 flex justify-end'>
+                {
+                    sortBy === true ? <button onClick={() => handleSort('asc')} className="flex items-center px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        <svg className="w-5 h-5 mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
+                        </svg>
+                        <span className="mx-1">Sort By Price</span>
+                    </button>
+                        :
+                        <button onClick={() => handleSort('dsc')} className="flex items-center px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                            <svg className="w-5 h-5 mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
+                            </svg>
+                            <span className="mx-1">Sort By Price</span>
+                        </button>
+                }
+
+
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {

@@ -11,47 +11,54 @@ const Footer = () => {
                         {/* Blog Section */}
                         <div className="w-full sm:w-1/3 mb-6">
                             <h3 className="uppercase font-bold">Blog</h3>
-                            <Link
-                                href="#"
+                            <a
+                                href="https://en.wikipedia.org/wiki/Hotel"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Resources
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://en.wikipedia.org/wiki/Tourism"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Document Services
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://experience-crm.fr/en/to-20-hotel-services/"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Services
-                            </Link>
+                            </a>
                         </div>
 
                         {/* About Section */}
                         <div className="w-full sm:w-1/3 mb-6">
                             <h3 className="uppercase font-bold">About</h3>
-                            <Link
-                                href="#"
+                            <a
+
+                                href="https://www.booking.com/searchresults.en-gb.html?aid=306395&label=toulouse%2Fcompans-W8OBWSC4yosrRzdOyYJ6YgS648935346409%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-33463590%3Alp9069495%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YZVcNNsENnH02-pWD53qm9c&gclid=CjwKCAiAqrG9BhAVEiwAaPu5zvPgLoOc__3624h88KardN8f2-m-UaxVQmAHRxyHv3Njx8zOppS6vRoCeucQAvD_BwE&dest_type=district&redirected=1&dest_id=7414&source=district&from_district=1&keep_landing=1&sid=821eb28f97550227c903e1c8b280f906"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Company
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://nhghotels.com/hotel-community-service/"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Community
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://jobs.bdjobs.com/jobsearch.asp?fcatId=20&icatId="
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Careers
-                            </Link>
+                            </a>
                         </div>
 
                         {/* Contact Section */}

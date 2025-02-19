@@ -15,9 +15,9 @@ const SingleRoom = ({ room }) => {
         rating
     } = room;
     return (
-        <Link data-aos="fade-up" data-aos-duration="1500" to={`/room-details/${_id}`} title='view details' className=' hover:scale-[1.05] transition-all duration-500 ease-in-out '  >
+        <Link data-aos="fade-up" data-aos-duration="1500" to={`/room-details/${_id}`} title='view details' className='hover:scale-[1.05] transition-all duration-1000 ease-in-out '  >
 
-            <div className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:border border-blue-400">
+            <div className="w-full max-w-lg pb-5 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:border border-blue-400">
                 <img
                     className="object-cover object-center w-full h-56"
                     src={image}
@@ -62,6 +62,11 @@ const SingleRoom = ({ room }) => {
 
 
 
+                </div>
+                <div className='flex justify-center'>
+                    <button className="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 text-center">
+                        See More
+                    </button>
                 </div>
             </div>
         </Link >
