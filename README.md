@@ -52,13 +52,17 @@
 
 ---
 
-## ✨ Features
+## ✨ Key Features of Hotel Rose:
 
-1. You can easily log in with Google
-2. You can easily register an account(where name, photo, email and password)
-3. You can book any available room.
-4. You can update or delete your booking room.
-5. When you book any available room you can review .
+- **Luxury Room Options:** Showcases a variety of elegant and comfortable rooms tailored to guests' needs.
+- **Seamless Booking System:** Easy-to-use booking platform for quick and direct reservations.
+- **Stunning Visuals:** High-quality images of the hotel, rooms, and amenities to give guests a glimpse of their experience.
+- **Guest Reviews:** Display customer testimonials, offering insight into previous guests' memorable experiences.
+- **Comprehensive Services:** Highlights the hotel’s premium services, including dining, spa, fitness, and event facilities.
+- **Mobile-Friendly:** Optimized for a smooth and responsive experience across all devices.
+- **Special Offers:** Provides promotions and discounts for a more affordable stay.
+- **Real-Time Availability:** Displays up-to-date room availability to ensure guests can secure their preferred stay.
+- **Easy Navigation:** User-friendly interface to explore the hotel’s amenities and book accommodations without hassle.
 
 ---
 
