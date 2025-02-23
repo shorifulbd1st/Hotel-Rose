@@ -148,3 +148,48 @@
    VITE_SERVER_API_URL=______________________
    ```
    > **Note:** Replace the `VITE_API_KEY` and `VITE_AUTH_DOMAIN`, along with other placeholders, with actual values.
+
+### Server Side Setup
+
+1. Clone the server-side repository:
+
+   ```bash
+   git clone https://github.com/shorifulbd1st/Visa-Navigator-Portal-Server.git
+   cd Visa-Navigator-Portal-Server
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the server:
+
+   ```bash
+   node index.js
+   ```
+
+   --- OR ---
+
+   ```bash
+   nodemon index.js
+   ```
+
+4. Open the project in a code editor:
+   ```bash
+   code .
+   ```
+5. Add the `.env` file in the root directory and include the following environment variables:
+   ```bash
+   DB_USER=..........................................
+   DB_PASS=..........................................
+   SECRET_KEY=.......................................
+   ```
+   > **Note:** Replace the `index.js` file's `mongo_uri` and the `.env` file's `DB_USER`, `DB_PASS` and `SECRET_KEY`  with actual values.
+
+## 🧑‍💻 Authors
+
+- Shoriful Islam (Lead Developer)
+- Lead Developer & Maintainer
+- Connect with me on [_GitHub_](https://github.com/shorifulbd1st) & [_Facebook_](https://www.facebook.com/shoriful1st)
