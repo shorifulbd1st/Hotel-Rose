@@ -74,7 +74,7 @@ function SelectHotelSection({ setRooms }) {
                     <option value="" disabled>
                         Price Range
                     </option>
-                    <option value="All visa">All visa</option>
+                    <option value="All Price">All Price</option>
                     <option value="40-50">$40-$50</option>
                     <option value="51-60">$51-$60</option>
                     <option value="61-70">$61-$70</option>

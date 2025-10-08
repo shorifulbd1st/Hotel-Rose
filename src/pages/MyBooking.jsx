@@ -31,8 +31,8 @@ const MyBooking = () => {
   // console.log('booking rooms', bookingRooms)
 
   return (
-    <div>
-      <div className="container px-4 mx-auto my-10">
+    <div className="min-h-[calc(100vh-305px)]">
+      <div className="container px-4 mx-auto my-10 h">
         <Helmet>
           <title>My Booking Rooms</title>
           <meta name="description" content="Helmet application" />
